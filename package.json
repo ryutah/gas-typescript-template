@@ -10,11 +10,13 @@
     "build:prod": "NODE_ENV=production node build.cjs",
     "fix": "prettier --write 'src/**/*.ts' && eslint --fix src",
     "lint": "eslint src",
-    "clasp:pull": "cd prod && clasp pull",
     "clasp:login": "clasp login",
-    "clasp:push:dev": "NODE_ENV=development cd prod && clasp push",
-    "clasp:push:stg": "NODE_ENV=staging cd prod && clasp push",
-    "clasp:push:prod": "NODE_ENV=production cd prod && clasp push"
+    "clasp:pull:dev": "cd ./gas/dev && clasp pull",
+    "clasp:pull:stg": "cd ./gas/stg && clasp pull",
+    "clasp:pull:prod": "cd ./gas/prod && clasp pull",
+    "clasp:push:dev": "NODE_ENV=development cd ./gas/dev && clasp push",
+    "clasp:push:stg": "NODE_ENV=staging cd ./gas/stg && clasp push",
+    "clasp:push:prod": "NODE_ENV=production cd ./gas/prod && clasp push"
   },
   "devDependencies": {
     "@google/clasp": "^2.4.2",
