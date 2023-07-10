@@ -1,4 +1,4 @@
-# Anken List
+# gas-typescript-template
 
 ## Quick Start
 
