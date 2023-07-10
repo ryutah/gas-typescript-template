@@ -1,0 +1,29 @@
+{
+  "name": "gas-typescript-template",
+  "engines": {
+    "node": "20.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "build": "node build.cjs",
+    "fix": "prettier --write 'src/**/*.ts' && eslint --fix src",
+    "lint": "eslint src",
+    "clasp:pull": "cd prod && clasp pull",
+    "clasp:login": "clasp login",
+    "clasp:push:prod": "cd prod && clasp push"
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.64",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "esbuild": "^0.18.3",
+    "esbuild-gas-plugin": "^0.5.2",
+    "eslint": "^8.43.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "gts": "^3.1.1",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.3"
+  }
+}

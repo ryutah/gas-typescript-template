@@ -1,0 +1,11 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - "./node_modules/gts"
+parserOptions:
+  ecmaVersion: latest
+rules:
+  quotes:
+    - error
+    - double
