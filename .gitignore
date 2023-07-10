@@ -3,7 +3,9 @@
 
 # Custome
 
-prod/*.js
+gas/dev/*.js
+gas/stg/*.js
+gas/prod/*.js
 
 # Logs
 logs

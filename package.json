@@ -5,12 +5,16 @@
     "npm": "9.x"
   },
   "scripts": {
-    "build": "node build.cjs",
+    "build:dev": "NODE_ENV=development node build.cjs",
+    "build:stg": "NODE_ENV=staging node build.cjs",
+    "build:prod": "NODE_ENV=production node build.cjs",
     "fix": "prettier --write 'src/**/*.ts' && eslint --fix src",
     "lint": "eslint src",
     "clasp:pull": "cd prod && clasp pull",
     "clasp:login": "clasp login",
-    "clasp:push:prod": "cd prod && clasp push"
+    "clasp:push:dev": "NODE_ENV=development cd prod && clasp push",
+    "clasp:push:stg": "NODE_ENV=staging cd prod && clasp push",
+    "clasp:push:prod": "NODE_ENV=production cd prod && clasp push"
   },
   "devDependencies": {
     "@google/clasp": "^2.4.2",

@@ -6,7 +6,9 @@
 
 ### 2. Set .clasp.json
 
-```json:prod/.clasp.json
+#### dist/dev/.clasp.json, dist/stg/.clasp.json, dist/prod/.clasp.json
+
+```json
 {
   "scriptId": "<YOUR_SCRIPT_ID>", // change to use script id
   "rootDir": ".",
@@ -23,14 +25,18 @@ npm install
 npm run login
 
 # build typescript to gas
-npm run build
+npm run build:dev
 
 # deploy GAS
-npm run clasp:push:prod
+npm run clasp:push:dev
 ```
 
 ## Contributing
 
-### Before push
-
-1. `npm run fix` を実行する
+1. run `npm run fix`
+1. create branch
+   - `feature/id/[ISSUE_ID]/master`
+   - `feature/[CHANGE_OVERVIEW]`
+1. commit with [Conventional Commit](https://www.conventionalcommits.org/ja/v1.0.0/)
+1. push branch
+1. send pr
